@@ -1,7 +1,10 @@
 # People Detection System
 
-![Python](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9-blue)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.8.0-orange)
+![NVIDIA TAO](https://img.shields.io/badge/NVIDIA-TAO_Toolkit-76B900?style=flat-square&logo=nvidia)
+![Infineon](https://img.shields.io/badge/Infineon-PSOC_Edge-0058CC?style=flat-square)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Lite-FF6F00?style=flat-square&logo=tensorflow)
+![ONNX](https://img.shields.io/badge/ONNX-Runtime-005CED?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3.7%20%7C%203.8%20%7C%203.9-blue?style=flat-square&logo=python)
 
 A robust, high-performance people detection system that leverages NVIDIA TAO-trained models with TensorFlow Lite and Infineon tooling. The implementation supports hardware acceleration via Ethos-U NPU when available.
 
