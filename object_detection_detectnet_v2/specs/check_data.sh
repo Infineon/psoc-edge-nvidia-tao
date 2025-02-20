@@ -1,0 +1,1 @@
+ls -aill /workspace/tao-experiments/data/tfrecords/coco_trainval/
