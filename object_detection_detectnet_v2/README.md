@@ -75,7 +75,7 @@ The resulting models are specifically tailored for edge deployment, balancing ac
    jupyter notebook
    ```
 
-5. **Open the notebook** `NVIDIA_TAO_DetectNet_v2_for_Infineon_PSOC_EDGE.ipynb`
+5. **Open the notebook** `DetectNet_v2_for_Infineon_PSOC_EDGE.ipynb`
 
 [Back to Top](#nvidia-tao-detectnet_v2-for-infineon-psoc-edge-devices)
 
