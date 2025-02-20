@@ -1,0 +1,11 @@
+# Core dependencies
+numpy>=1.19.0
+opencv-python>=4.5.0
+rich>=12.0.0
+
+# TensorFlow options (uncomment one based on your needs)
+# For full TensorFlow installation:
+tensorflow==2.8.0
+
+# For TensorFlow Lite only (smaller footprint, recommended for deployment):
+# tflite-runtime==2.8.0
