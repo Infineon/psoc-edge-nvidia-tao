@@ -1,5 +1,10 @@
 # NVIDIA TAO DetectNet_v2 for Infineon PSOC EDGE Devices
 
+![NVIDIA TAO](https://img.shields.io/badge/NVIDIA-TAO_Toolkit-76B900?style=flat-square&logo=nvidia)
+![Infineon](https://img.shields.io/badge/Infineon-Tooling-0058CC?style=flat-square)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat-square&logo=jupyter)
+![ONNX](https://img.shields.io/badge/ONNX-Runtime-005CED?style=flat-square)
+
 This repository contains a detailed Jupyter notebook that demonstrates how to train, optimize, and deploy object detection models from NVIDIA TAO (Train Adapt Optimize) to Infineon PSOC EDGE devices. The workflow showcases a complete end-to-end pipeline from model training to edge deployment, specifically optimized for resource-constrained IoT and edge devices.
 
 **Note: An NVIDIA GPU is required to run this notebook.**
