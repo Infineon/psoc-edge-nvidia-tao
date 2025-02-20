@@ -158,13 +158,9 @@ The optimized models achieve impressive performance metrics on Infineon PSOC Edg
 - **Security applications**: Intrusion detection, perimeter monitoring
 - **Automotive**: Passenger detection, driver monitoring
 
-## Contributing
-
-Contributions to improve the tooling and workflows are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE.txt) file for details.
 
 ## Acknowledgements
 
