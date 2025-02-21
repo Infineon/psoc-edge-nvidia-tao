@@ -30,7 +30,7 @@ This repository contains a detailed Jupyter notebook that demonstrates how to tr
 
 This notebook demonstrates how to leverage NVIDIA TAO (Train Adapt Optimize) Toolkit to build an efficient object detection model using DetectNet_v2 architecture, and then optimize it for deployment on Infineon PSOC EDGE devices. The workflow covers the entire process from data preparation to deployment, including critical optimization techniques such as pruning and quantization-aware training.
 
-The resulting models are specifically tailored for edge deployment, balancing accuracy with the resource constraints of edge devices. The integration with Infineon's toolchain enables seamless deployment to PSOC EDGE devices, allowing developers to bring AI capabilities to IoT and embedded systems.
+The resulting models are specifically tailored for edge deployment, balancing accuracy with the resource constraints of edge devices. The integration with Infineon's software enables seamless deployment to PSOC EDGE devices, allowing developers to bring AI capabilities to IoT and embedded systems.
 
 [Back to Top](#nvidia-tao-detectnet_v2-for-infineon-psoc-edge-devices)
 
@@ -60,8 +60,8 @@ The resulting models are specifically tailored for edge deployment, balancing ac
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Infineon/tao-psoc-edge.git
-   cd tao-psoc-edge
+   git clone https://github.com/Infineon/psoc-edge-nvidia-tao.git
+   cd psoc-edge-nvidia-tao
    ```
 
 2. **Install the TAO launcher**:
@@ -139,8 +139,8 @@ Learn how to optimize the model for edge deployment:
 
 The final steps to prepare and deploy your model:
 - Exporting the optimized model to ONNX format
-- Installing the Infineon toolchain dependencies
-- Converting the model for Infineon PSOC EDGE using IFX Tooling
+- Installing the Infineon software dependencies
+- Converting the model for Infineon PSOC EDGE using IFX Tooling (TFlite format)
 - Generating deployment-ready artifacts
 
 **Time estimate**: 30-45 minutes

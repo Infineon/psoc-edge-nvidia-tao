@@ -14,7 +14,7 @@ This repository contains two main workflows:
 
 - **[object_detection_detectnet_v2](./object_detection_detectnet_v2/)**: Complete pipeline for training custom object detection models using NVIDIA's DetectNet_v2 architecture and deploying to Infineon PSOC Edge devices.
 
-- **[peoplenet_tao](./peoplenet_tao/)**: Streamlined workflow for acquiring and converting NVIDIA's pre-trained PeopleNet models for deployment on Infineon hardware.
+- **[peoplenet_tao](./peoplenet_tao/)**: Streamlined workflow for acquiring and converting NVIDIA's pre-trained PeopleNet models for deployment on Infineon PSOC Edge devices.
   - **[peoplenet_tflite_demo](./peoplenet_tao/peoplenet_tflite_demo/)**: A Python implementation for running the converted models on edge devices with TensorFlow Lite.
 
 ## What is Infineon PSOC Edge?
@@ -67,8 +67,8 @@ These optimizations can reduce model size by 60-90% and increase inference speed
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Infineon/tao-psoc-edge.git
-   cd tao-psoc-edge
+   git clone https://github.com/Infineon/psoc-edge-nvidia-tao.git
+   cd psoc-edge-nvidia-tao
    ```
 
 2. **Choose your workflow**:
@@ -81,12 +81,12 @@ These optimizations can reduce model size by 60-90% and increase inference speed
    - For using pre-trained PeopleNet models:
      ```bash
      cd peoplenet_tao
-     jupyter notebook PeopleNet_Conversion_Notebook.ipynb
+     jupyter notebook PeopleNet.ipynb
      ```
 
 3. **Follow the notebook instructions** to train/optimize your models
 
-4. **Deploy and run** the optimized models using the provided Python implementation in the `peoplenet_tflite_demo` directory
+4. **Deploy and run** the optimized models using the provided Python implementation in the `peoplenet_tao/peoplenet_tflite_demo` directory. 
 
 ## Workflow Overview
 
@@ -133,27 +133,27 @@ The optimized models achieve impressive performance metrics on Infineon PSOC Edg
 | DetectNet_v2 (Pruned + INT8) | 60-80% | 5-15 FPS | 
 | PeopleNet (Pruned + INT8) | 70-85% | 8-20 FPS | 
 
-*Note: Performance varies based on input resolution, model configuration, and specific PSOC Edge device used.*
+*Note: Performance varies based on input resolution, model configuration, memory placement and specific PSOC Edge device used.*
 
 ## Development Workflow
 
 ```
-┌───────────────┐     ┌───────────────┐     ┌───────────────┐
-│ Train/Download│     │   Optimize    │     │    Deploy     │
-│   TAO Model   │────▶│  for Ethos-U  │────▶│  to PSOC Edge │
-└───────────────┘     └───────────────┘     └───────────────┘
+┌───────────────┐     ┌───────────────┐      ┌───────────────┐
+│ Train/Download│     │   Optimize    │      │    Deploy     │
+│   TAO Model   │───▶│  for Ethos-U   │────▶│  to PSOC Edge │
+└───────────────┘     └───────────────┘      └───────────────┘
        │                      │                     │
        ▼                      ▼                     ▼
-┌───────────────┐     ┌───────────────┐     ┌───────────────┐
-│  Pre-trained  │     │    Pruning    │     │   TFLite or   │
-│    Models     │     │ Quantization  │     │  ONNX Runtime │
-└───────────────┘     └───────────────┘     └───────────────┘
+┌───────────────┐     ┌───────────────┐      ┌───────────────┐
+│  Pre-trained  │     │    Pruning    │      │   TFLite or   │
+│    Models     │     │ Quantization  │      │  ONNX Runtime │
+└───────────────┘     └───────────────┘      └───────────────┘
 ```
 
 ## Use Cases
 
 - **Smart retail**: People counting, queue management
-- **Industrial safety**: PPE detection, restricted area monitoring
+- **Industrial safety**: Personal protective equipment detection, restricted area monitoring
 - **Smart buildings**: Occupancy detection, energy management
 - **Security applications**: Intrusion detection, perimeter monitoring
 - **Automotive**: Passenger detection, driver monitoring

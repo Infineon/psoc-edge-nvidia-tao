@@ -40,8 +40,8 @@ The system consists of several key components:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Infineon/tao-psoc-edge.git
-   cd tao-psoc-edge/peoplenet_tao
+   git clone https://github.com/Infineon/psoc-edge-nvidia-tao.git
+   cd psoc-edge-nvidia-tao/peoplenet_tao/peoplenet_tflite_demo
    ```
 
 2. Create a virtual environment (recommended):
@@ -136,16 +136,16 @@ The NMS model filters overlapping detections based on IoU (Intersection over Uni
 
 ```
 people-detection/
-├── people_detector.py     # Main application
-├── detect_net_v2_model.py # DetectNetV2 model wrapper
-├── nms_model.py           # NMS model wrapper
+├── people_detector.py       # Main application
+├── detect_net_v2_model.py   # DetectNetV2 model wrapper
+├── nms_model.py             # NMS model wrapper
 ├── post_processing_model.py # Post-processing utilities
-├── nms_builder.py         # NMS model builder
-├── requirements.txt       # Project dependencies
-├── models/                # Pre-trained model files
+├── nms_builder.py           # NMS model builder
+├── requirements.txt         # Project dependencies
+├── models/                  # Pre-trained model files
 │   ├── resnet34_peoplenet_int8_ex.tflite
 │   └── nms_model.tflite
-└── README.md              # This file
+└── README.md                # This file
 ```
 
 ### Extending the System
