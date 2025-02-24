@@ -192,8 +192,9 @@ PeopleNet (Pruned + INT8) | 70-85% | 8-20 FPS
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE.txt) file for details.
+This project is licensed under Infineon License - see the [LICENSE](./LICENSE.txt) file for details.
 
+By pulling and using the NVIDIA TAO Toolkit, you accept the terms and conditions of these [licenses](https://www.nvidia.com/en-us/data-center/products/nvidia-ai-enterprise/eula/).
 
 ## Acknowledgements
 
