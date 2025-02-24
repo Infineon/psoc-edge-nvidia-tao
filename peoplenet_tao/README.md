@@ -1,4 +1,4 @@
-# PeopleNet Conversion Notebook
+# PeopleNet conversion notebook
 
 ![NVIDIA TAO](https://img.shields.io/badge/NVIDIA-TAO_Toolkit-76B900?style=flat-square&logo=nvidia)
 ![Infineon](https://img.shields.io/badge/Infineon-Tooling-0058CC?style=flat-square)
@@ -9,24 +9,26 @@ This Jupyter notebook provides a streamlined workflow for acquiring NVIDIA's pre
 
 ## Overview
 
-The notebook covers the essential steps to:
+The notebook covers the following:
 
-1. **Configure the environment** for TAO model conversion
-2. **Install the NGC CLI** for accessing NVIDIA's model registry
-3. **Download pre-trained PeopleNet models** in quantized ONNX format
-4. **Convert models** using Infineon's tooling for Ethos-U acceleration
+- **Configure the environment:** TAO model conversion
+- **Install the NGC CLI:** Accessing NVIDIA's model registry
+- **Download pre-trained PeopleNet models:** Quantized ONNX format
+- **Convert models:** Infineon's tooling for Ethos-U acceleration
+
 
 ## Prerequisites
 
-Before running this notebook, ensure you have:
+Before running this notebook, ensure that you have:
 
-- **NVIDIA GPU** with CUDA support for running the TAO container
-- **Docker** installed and configured
-- **Access to NGC** (NVIDIA GPU Cloud) - create an account if needed
-- **Infineon tooling package** installed in your Python environment
-- At least **16GB of disk space** for models and outputs
+- **NVIDIA GPU:** With CUDA support for running the TAO container
+- **Docker:** Installed and configured
+- **Access to NGC:** (NVIDIA GPU Cloud) - Create an account if needed
+- **Infineon tooling package:** Installed in your Python environment
+- **16 GB of disk space:** At least 16 GB for models and outputs
 
-## Environment Setup
+
+## Environment setup
 
 The notebook starts by configuring the environment variables needed for the workflow:
 
@@ -54,9 +56,10 @@ os.environ["LOCAL_EXPERIMENT_DIR"] = os.path.join(
 ! mkdir -p $LOCAL_EXPERIMENT_DIR
 ```
 
-> **Note**: Be sure to update `LOCAL_PROJECT_DIR` to your specific project path.
+> **Note:** Ensure to update `LOCAL_PROJECT_DIR` to your specific project path.
 
-## NGC CLI Installation
+
+## NGC CLI installation
 
 The NGC CLI is required to download models from NVIDIA's model registry:
 
@@ -73,9 +76,9 @@ The NGC CLI is required to download models from NVIDIA's model registry:
 os.environ["PATH"]="{}/ngccli/ngc-cli:{}".format(os.getenv("LOCAL_PROJECT_DIR", ""), os.getenv("PATH", ""))
 ```
 
-## Model Download
+## Model download
 
-The notebook downloads the pre-trained, quantized PeopleNet model:
+The notebook downloads the pre-trained and quantized PeopleNet model:
 
 ```python
 !mkdir -p $LOCAL_EXPERIMENT_DIR/quantized_onnx_model
@@ -89,7 +92,8 @@ This specific model version (v2.3.4) includes:
 - Pruning for reduced model size
 - Pre-trained weights for people, bag, and face detection
 
-## Infineon Tooling Conversion
+
+## Infineon tooling conversion
 
 The heart of the notebook is the model conversion using Infineon's tooling:
 
@@ -122,22 +126,25 @@ except ModelConversionError as e:
     print(f"Conversion failed: {e}")
 ```
 
-### Configuration Options
+
+### Configuration options
 
 The configuration parameters control how the model is optimized for Ethos-U:
 
-| Parameter | Description | Value |
-|-----------|-------------|-------|
-| `vela_accelerator` | Target Ethos-U accelerator | ethos-u55-128 |
-| `vela_system_config` | Hardware configuration | PSE84_M55_U55_400MHz |
-| `vela_memory_mode` | Memory usage strategy | Sram_Only |
-| `compress_to_fp16` | FP16 compression flag | False |
-| `vela_ini_file_path` | Path to Vela config file | vela.ini |
+Parameter | Description | Value
+-----------|-------------|-------
+`vela_accelerator` | Target Ethos-U accelerator | ethos-u55-128
+`vela_system_config` | Hardware configuration | PSE84_M55_U55_400MHz
+`vela_memory_mode` | Memory usage strategy | Sram_Only
+`compress_to_fp16` | FP16 compression flag | False
+`vela_ini_file_path` | Path to Vela config file | vela.ini
 
-## Next Steps
+<br>
+
+## Next steps
 
 After completing the model conversion, you can:
 
-1. Move the converted model to the `models/converted` directory
-2. Use the Python implementation in `peoplenet_tflite_demo` to run detections
-3. For detailed instructions on using the detection system, refer to the README in the `peoplenet_tflite_demo` directory
+- Move the converted model to the `models/converted` directory
+- Use the Python implementation in `peoplenet_tflite_demo` to run detections
+- For detailed instructions on using the detection system, see the README in the `peoplenet_tflite_demo` directory
