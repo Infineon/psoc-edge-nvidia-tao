@@ -8,6 +8,7 @@
 
 A comprehensive toolkit for training, optimizing, and deploying AI models on Infineon PSOC&trade; Edge MCU devices using NVIDIA's Train Adapt Optimize (TAO) Toolkit. This repository provides end-to-end workflows for building efficient computer vision applications that run on resource-constrained edge devices.
 
+> **Note:** An NVIDIA GPU is required to run the notebooks in this repository.
 
 ## Repository structure
 

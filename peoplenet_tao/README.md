@@ -7,6 +7,8 @@
 
 This Jupyter notebook provides a streamlined workflow for acquiring NVIDIA's pre-trained PeopleNet models and converting them for deployment on Infineon hardware with Ethos-U acceleration.
 
+> **Note:** An NVIDIA GPU is required to run this notebook.
+
 ## Overview
 
 The notebook covers the following:
